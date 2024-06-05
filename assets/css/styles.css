@@ -1,0 +1,46 @@
+body {
+  background-color: #666;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  background-image: url(../img/dark-carbon-fiber-map-7.jpg);
+  background-repeat: no-repeat;
+}
+
+.custom-aside {
+  width: 350px;
+  margin-left: 1rem;
+  background-color: blueviolet;
+}
+
+a {
+  margin: 10px;
+  text-decoration: none;
+}
+
+.main-intro {
+  width: 25%;
+}
+
+.bg-image {
+  background-image: url("https://mdbcdn.b-cdn.net/img/new/slides/041.webp");
+  height: 400px;
+}
+
+.mask {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.form-label {
+  color: red;
+}
