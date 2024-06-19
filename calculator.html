@@ -4,13 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ClassWorkk</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/bootstrap/icons/icons8-program-material-sharp-96.png"
-    />
     <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/calculator.css" />
   </head>
   <body class="contact">
     <header>
@@ -58,9 +54,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="calculator.html"
-                      >Calculator</a
-                    >
+                    <a class="dropdown-item" href="contact.html">Contact</a>
                   </li>
                 </ul>
               </li>
@@ -69,50 +63,37 @@
         </div>
       </nav>
     </header>
-    <div class="container-form">
-      <form class="contact-form" novalidate>
-        <div class="mb-3">
-          <label for="Name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="Name" />
-          <p id="nameError" class="text-danger"></p>
+
+    <div class="container">
+      <div class="col-auto">
+        <div id="display"></div>
+        <div class="buttons">
+          <div class="button">C</div>
+          <div class="button">/</div>
+          <div class="button">*</div>
+          <div class="button">&larr;</div>
+          <div class="button">7</div>
+          <div class="button">8</div>
+          <div class="button">9</div>
+          <div class="button">-</div>
+          <div class="button">4</div>
+          <div class="button">5</div>
+          <div class="button">6</div>
+          <div class="button">+</div>
+          <div class="button">1</div>
+          <div class="button">2</div>
+          <div class="button">3</div>
+          <div class="button">.</div>
+          <div class="button">(</div>
+          <div class="button">0</div>
+          <div class="button">)</div>
+          <div id="equal" class="button">=</div>
         </div>
-        <div class="mb-3">
-          <label for="Emailinput" class="form-label">Email address</label>
-          <input
-            type="email"
-            class="form-control"
-            id="Email"
-            aria-describedby="emailHelp"
-          />
-          <p id="emailError" class="text-danger"></p>
-        </div>
-        <div class="mb-3">
-          <label for="Passwordinput" class="form-label">Password</label>
-          <input type="password" class="form-control" id="Password" />
-          <p id="passwordError" class="text-danger"></p>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+      </div>
+      <p id="loga"></p>
     </div>
-    <footer
-      class="footer footer-custom mt-auto py-3 bg-dark text-white text-center"
-    >
-      &copy;2024
-      <a target="_blank" href="https://github.com/Patryk-98">
-        <img src="./assets/bootstrap/icons/github.svg" alt="Github" />
-      </a>
-      <a href="#">
-        <img src="./assets/bootstrap/icons/instagram.svg" alt="Instagram" />
-      </a>
-      <a href="#">
-        <img
-          class="twitter"
-          src="./assets/bootstrap/icons/twitter-x.svg"
-          alt="X"
-        />
-      </a>
-    </footer>
+
     <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./assets/bootstrap/js/validation.js"></script>
+    <script src="./assets/bootstrap/js/app.js"></script>
   </body>
 </html>

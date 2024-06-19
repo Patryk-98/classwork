@@ -1,33 +1,49 @@
-const form = document.querySelector(".contact-form");
-form.setAttribute("novalidate", "");
-document.addEventListener("submit", function (event) {
-  event.preventDefault();
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".contact-form");
 
-  let email = document.getElementById("Emailinput").value;
-  let password = document.getElementById("Passwordinput").value;
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  if (!validateEmail(email)) {
-    alert("Please enter a valid email address.");
-    return;
+    let email = document.getElementById("Emailinput").value;
+    let password = document.getElementById("Passwordinput").value;
+    let isValid = true;
+
+    // Clear previous error messages
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("passwordError").innerText = "";
+
+    // Validate email format
+    if (!validateEmail(email)) {
+      document.getElementById("emailError").innerText =
+        "Please enter a valid email address.";
+      isValid = false;
+    }
+
+    // Validate password complexity
+    if (!validatePassword(password)) {
+      document.getElementById("passwordError").innerText =
+        "Password must be at least 8 characters long and contain both letters and numbers.";
+      isValid = false;
+    }
+
+    // If there are no errors, you can proceed with form submission or further processing
+    if (isValid) {
+      alert("Form submitted successfully!");
+    }
+  });
+
+  // Validate email format
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  if (!validatePassword(password)) {
-    alert(
-      "Password must be at least 8 characters long and contain both letters and numbers."
+  // Validate password complexity
+  function validatePassword(password) {
+    return (
+      password.length >= 8 && /\d/.test(password) && /[a-zA-Z]/.test(password)
     );
-    return;
   }
-
-  alert("Form submitted successfully!");
 });
-
-function validateEmail(email) {
-  return email.includes("@") && email.includes(".");
-}
-
-function validatePassword(password) {
-  return password.length >= 8 && /\d/.test(password) && /[a-zA-Z]/;
-}
 
 // form.setAttribute("novalidate", ""); prevents browsers bulit in validatiion ffrom running
 

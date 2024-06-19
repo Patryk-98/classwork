@@ -1,8 +1,8 @@
 body {
-  background-color: #666;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .contact {
@@ -14,6 +14,11 @@ body {
   margin-left: 1rem;
   background-color: blueviolet;
 }
+.navbar-custom {
+  background: url(../img/dark-carbon-fiber-map-7.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 a {
   margin: 10px;
@@ -23,14 +28,8 @@ a {
 .main-intro {
   width: 25%;
 }
-
-.bg-image {
-  background-image: url("https://mdbcdn.b-cdn.net/img/new/slides/041.webp");
-  height: 400px;
-}
-
-.mask {
-  background-color: rgba(0, 0, 0, 0.6);
+img {
+  background-color: rgb(47, 49, 48);
 }
 
 .container-form {
@@ -72,6 +71,13 @@ a {
 .full-screen-2 {
   background-color: rgb(127, 45, 112);
 }
+#Name,
+#Password,
+#Email {
+  background-color: rgb(57, 57, 70);
+  border-color: rgb(57, 57, 70);
+}
+
 .full-screen-2 h1 {
   color: rgb(174, 255, 0);
   padding: 5rem;

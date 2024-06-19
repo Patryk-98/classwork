@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  box-shadow: 0px 0px 43px 17px rgba(153, 153, 153, 0.5);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#display {
+  width: 100%;
+  text-align: right;
+  height: 70px;
+  line-height: 70px;
+  padding: 16px 8px;
+  font-size: 30px;
+  background-color: rgb(105, 121, 121);
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  background-image: linear-gradient(
+    to right,
+    rgb(169, 83, 209),
+    rgb(56, 225, 255)
+  );
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 10px;
+}
+
+.button {
+  width: calc(25% - 20px);
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 30px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#equal {
+  background-color: rgb(85, 85, 255);
+  color: white;
+}
+
+.button:hover {
+  background-color: #323330;
+  color: white;
+}
